@@ -6,8 +6,12 @@
 	"types": "./dist/types/index.d.ts",
 	"typesVersions": {
 		"*": {
-			"*": ["./dist/types/index.d.ts"],
-			"global": ["./dist/dom-utils.d.ts"]
+			"*": [
+				"./dist/types/index.d.ts"
+			],
+			"global": [
+				"./dist/dom-utils.d.ts"
+			]
 		}
 	},
 	"exports": {
@@ -15,8 +19,9 @@
 		"default": "./dist/dom-utils.iife.js"
 	},
 	"scripts": {
-		"build": "vite build && pnpm run make-types",
+		"build": "pnpm cleanup && vite build && pnpm make-types",
 		"make-types": "tsc --project tsconfig.json && dts-bundle-generator -o dist/dom-utils.d.ts --no-check --export-referenced-types src/global-entry.ts && node scripts/enhance-global-types.js",
+		"cleanup": "shx rm -rf dist",
 		"dev": "vite build --watch"
 	},
 	"keywords": [],
@@ -25,6 +30,7 @@
 	"devDependencies": {
 		"@types/node": "^22.15.3",
 		"dts-bundle-generator": "^9.5.1",
+		"shx": "^0.4.0",
 		"typescript": "^5.8.3",
 		"vite": "^6.3.3"
 	},

@@ -23,7 +23,7 @@ function findHtmlEls(parentEl: Element | string | null, selector?: string): HTML
  * Finds a form element within a parent element or document using a CSS selector.
  *
  * @param {Element|string|null} parentEl - The parent element, a CSS selector string, or null.
- * @param {string} selector - The CSS selector to find the form element.
+ * @param {string} [selector] - The CSS selector to find the form element.
  *
  * @returns {HTMLFormElement|null} The found form element or null if not found.
  */
