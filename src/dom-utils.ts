@@ -99,7 +99,7 @@ export function findHtmlEls(
  */
 export function findFormEl(
 	parentEl: Element | string | null,
-	selector: string
+	selector?: string
 ): HTMLFormElement | null {
 	let el: HTMLElement | null = null;
 
@@ -725,7 +725,6 @@ export function forEachEl(
  * @param {string} eventType - The event type.
  * @param {string|null} selector - The CSS selector for event delegation, or null to attach directly to document.
  * @param {function(any): void} handler - The event handler function.
- * @returns {void}
  */
 export function listenDocumentEvent(
 	eventType: string,

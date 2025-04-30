@@ -24,7 +24,7 @@ export declare function findHtmlEls(parentEl: Element | string | null, selector?
  *
  * @returns {HTMLFormElement|null} The found form element or null if not found.
  */
-export declare function findFormEl(parentEl: Element | string | null, selector: string): HTMLFormElement | null;
+export declare function findFormEl(parentEl: Element | string | null, selector?: string): HTMLFormElement | null;
 /**
  * Finds an input element within a parent element or document using a CSS selector.
  *
@@ -180,7 +180,6 @@ export declare function forEachEl(selector: string | NodeListOf<Element> | HTMLE
  * @param {string} eventType - The event type.
  * @param {string|null} selector - The CSS selector for event delegation, or null to attach directly to document.
  * @param {function(any): void} handler - The event handler function.
- * @returns {void}
  */
 export declare function listenDocumentEvent(eventType: string, selector: string | null, handler: (e: any) => void): void;
 /**

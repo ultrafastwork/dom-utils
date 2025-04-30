@@ -27,7 +27,7 @@ function findHtmlEls(parentEl: Element | string | null, selector?: string): HTML
  *
  * @returns {HTMLFormElement|null} The found form element or null if not found.
  */
-function findFormEl(parentEl: Element | string | null, selector: string): HTMLFormElement | null;
+function findFormEl(parentEl: Element | string | null, selector?: string): HTMLFormElement | null;
 /**
  * Finds an input element within a parent element or document using a CSS selector.
  *
@@ -183,7 +183,6 @@ function forEachEl(selector: string | NodeListOf<Element> | HTMLElement[], handl
  * @param {string} eventType - The event type.
  * @param {string|null} selector - The CSS selector for event delegation, or null to attach directly to document.
  * @param {function(any): void} handler - The event handler function.
- * @returns {void}
  */
 function listenDocumentEvent(eventType: string, selector: string | null, handler: (e: any) => void): void;
 /**
